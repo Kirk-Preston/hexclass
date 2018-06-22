@@ -8,7 +8,7 @@ class hexbytes():
             hexesc = ('\\x')
             hexconcat = (hexesc+hexchar)
             bytestring.append(hexconcat)
-        return(''.join(bytestring))
+        return(''.join(reversed(bytestring)))
     def bigendian(self):
         bytestring = []
         for char in self.string:
@@ -16,7 +16,7 @@ class hexbytes():
             hexesc = ('\\x')
             hexconcat = (hexesc+hexchar)
             bytestring.append(hexconcat)
-        return(''.join(reversed(bytestring)))
+        return(''.join(bytestring))
 '''   
 tobytes = hexbytes("test")
 print(tobytes.lilendian())
